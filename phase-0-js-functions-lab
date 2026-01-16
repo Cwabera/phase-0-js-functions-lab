@@ -48,6 +48,6 @@ const savings = 10000;
 
 // ---- Output ----
 console.log("Total Income: $" + totalIncome);
-console.log("Total Expenses: $" + totalExpenses);
+console.log("Total Expenses: $" + totalExpenses); 
 console.log("Remaining Balance: $" + balance);
 console.log("Savings Percentage: " + calculateSavingsPercentage(totalIncome, savings).toFixed(2) + "%");
