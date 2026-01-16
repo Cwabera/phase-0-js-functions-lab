@@ -1,0 +1,53 @@
+// Function to calculate total income
+function calculateIncome(incomeList) {
+    let totalIncome = 0;
+
+    for (let income of incomeList) {
+        totalIncome += income;
+    }    
+
+     return totalIncome;
+}
+
+// Function to calculate total expenses
+function calculateExpenses(expenseList) {
+    let totalExpenses = 0;
+
+    for (let expense of expenseList) {
+        totalExpenses += expense;
+    }
+
+    return totalExpenses;
+}
+
+Income+Expenses=disposable income
+
+// Function to calculate remaining balance
+function calculateBalance(income, expenses) {
+    return income - expenses;
+}
+
+// Function to calculate savings percentage
+function calculateSavingsPercentage(income, savings) {
+    if (income === 0) {
+        return 0;
+    }
+
+    return (savings / income) * 100;
+}
+
+// ---- Sample Data ----
+const incomes = [50000, 15000, 5000];
+const expenses = [20000, 8000, 4000];
+
+// ---- Function Calls ----
+const totalIncome = calculateIncome(incomes);
+const totalExpenses = calculateExpenses(expenses);
+const balance = calculateBalance(totalIncome, totalExpenses);
+const savings = 10000;
+
+// ---- Output ----
+console.log("Total Income: $" + totalIncome);
+console.log("Total Expenses: $" + totalExpenses);
+console.log("Remaining Balance: $" + balance);
+console.log("Savings Percentage: " + calculateSavingsPercentage(totalIncome, savings).toFixed(2) + "%");
